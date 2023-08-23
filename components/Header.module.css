@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navList {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navList a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .navList a:hover {
+    color: #ddd;
+  }
+  

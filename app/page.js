@@ -1,22 +1,35 @@
 
+"use client"
+
 // import React from 'react';
 // import {useEffect, useState} from 'react';
-const page = () => {
+import { useEffect, useState } from 'react';
+import BlogItem from '../components/BlogItem';
+import styles from './Home.module.css';
 
-  // const [blogs, setBlogs]=useState([]);
+function HomePage() {
+  const [blogs, setBlogs] = useState([]);
 
-  // useEffect(()=>{
-  //   // Fetch blogs from the API
-  //    fetch('https://documenter.getpostman.com/view/9518923/2s946mZ9Zw')
-  //  })
+  useEffect(() => {
+    // Fetching the blogs from the API (assuming you have an API route set up)
+    fetch('https://basic-blog.teamrabbil.com/api/post-newest')
+      .then(response => response.json())
+      .then(data => setBlogs(data));
+  }, []);
 
   return (
-    <div>
-      
-    <h1>This is Home Page</h1>
+    <div className={styles.container}>
+      <h1 className={styles.text} >Welcome to Simple Blog</h1>
+      <section className={styles.blogSection}>
+              {blogs.map(blog => (
 
+          <BlogItem key={blog.id} blog={blog} />
+
+        ))}
+
+      </section>
     </div>
   );
-};
+}
 
-export default page;
+export default HomePage;

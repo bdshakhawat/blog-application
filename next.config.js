@@ -1,9 +1,8 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-// next.config.js
- 
-      distDir: 'build', // Custom build directory
+//  Custom build directory
+      distDir: 'build', 
       headers: async () => {
         return [
           {

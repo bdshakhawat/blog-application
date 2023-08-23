@@ -1,0 +1,25 @@
+.footer {
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .socialLinks {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .socialLinks a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .socialLinks a:hover {
+    color: #ddd;
+  }
+  
